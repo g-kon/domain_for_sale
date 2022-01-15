@@ -219,9 +219,8 @@
         return false
     }
     function substituteWithDomainName() {
-        const path = 'kupepe.com'
-        //const path = window.location.hash.replace('#', '')
-        //history.pushState({ page: 1 }, "", '/domain-for-sale/index-2.html')
+        const path = window.location.hash.replace('#', '')
+        history.pushState({ page: 1 }, "", '/domain-for-sale/index-2.html')
         toSubstitute = document.getElementsByClassName('domain-name')
         for(var i = 0; i < toSubstitute.length; i++){
             toSubstitute[i].innerHTML = toSubstitute[i].innerHTML.replace('{PATH}', path)
