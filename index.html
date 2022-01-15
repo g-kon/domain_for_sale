@@ -220,7 +220,7 @@
     }
     function substituteWithDomainName() {
         const path = window.location.hash.replace('#', '')
-        history.pushState({ page: 1 }, "", '/domain-for-sale/index-2.html')
+        history.pushState({ page: 1 }, "", '/domain-for-sale')
         toSubstitute = document.getElementsByClassName('domain-name')
         for(var i = 0; i < toSubstitute.length; i++){
             toSubstitute[i].innerHTML = toSubstitute[i].innerHTML.replace('{PATH}', path)
