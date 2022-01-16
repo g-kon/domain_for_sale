@@ -1258,7 +1258,7 @@ hr {
     height: auto;
   }
   .footer {
-    position: relative;
+    position: fixed;
     top: 0px;
   }
   .home-title {
