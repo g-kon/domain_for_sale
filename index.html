@@ -59,7 +59,7 @@
 
                             <h5 class="wrd-wrp-lft-col mt-4">Don't waste any more time.<br>Send me a message to get more
                                 details on how to grab this domain!</h5>
-                            <br><br><br>You can fill in the form on this page,<br>
+                            <br><br><br>You can fill in the form to the right,<br>
                             or email me directly at: <a href="mailto: george@gkonservices.com"><b>george@gkonservices.com</b></a>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group mt-3">
-                                                <input name="Name" id="name" type="text" class="form-control"
+                                                <input name="Name" onclick="return hideNavbar()" onblur="return showNavbar()" id="name" type="text" class="form-control"
                                                        placeholder="Your Name" required/>
                                             </div>
                                         </div>
@@ -96,7 +96,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group mt-3">
                                                 <input name="Email" id="email" type="email" class="form-control"
-                                                       placeholder="Your Email" required/>
+                                                       placeholder="Your Email" onclick="return hideNavbar()" onblur="return showNavbar()" required/>
                                             </div>
                                         </div>
                                     </div>
@@ -105,7 +105,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group mt-3">
                                                 <textarea name="Message" id="comments" rows="4" class="form-control"
-                                                          placeholder="Your Domain-related questions (if any)"></textarea>
+                                                          placeholder="Your Domain-related questions (if any)" onclick="return hideNavbar()" onblur="return showNavbar()"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -130,7 +130,7 @@
     </div>
 </div>
 
-<div class="footer">
+<div class="footer" id="test">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
