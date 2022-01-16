@@ -1284,3 +1284,8 @@ hr {
 
 /*# sourceMappingURL=style.css.map */
 
+/* My additions */
+.wrd-wrp-lft-col {
+  width: 650px;
+  word-wrap: break-word;
+}
