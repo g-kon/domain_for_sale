@@ -52,5 +52,17 @@ function substituteWithDomainName() {
     }
     document.getElementById('subject').value = path
 }
+    
+function hideNavbar() {// needed for Android browser pushing up keyboard
+    if (screen.height <= 480) { // mobile
+        document.getElementById('test').style.zIndex = "-1";
+    }
+}
+
+function showNavbar() { // needed for Android browser pushing up keyboard
+    if (screen.height <= 480) {// mobile
+        document.getElementById('test').style.zIndex = "1";
+    }
+} 
 
 substituteWithDomainName()
