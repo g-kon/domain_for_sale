@@ -30,21 +30,6 @@
     </div>
 </div>
 
-<!--    <div class="header">-->
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                <div class="col-lg-12">-->
-<!--                    <a href=""><img src="images/logo-dark.png" alt="" height="26" /></a>-->
-
-<!--                    <div class="float-right d-none d-md-inline-block">-->
-<!--                        <a href="signup.html" class="btn btn-outline-primary btn-sm text-uppercase mr-2">Sign up</a>-->
-<!--                        <a href="login.html" class="btn btn-primary btn-sm text-uppercase">Login</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
 <div class="contain-box">
     <div class="home-center">
         <div class="home-desc-center">
@@ -53,10 +38,10 @@
                     <div class="col-lg-6">
                         <div class="mt-lg-0 mt-4">
                             <h1 class="text-primary">For Sale!</h1>
-                            <h1 class="domain-name home-title display-4 font-weight-bold">www.{PATH}</h1>
-
-                            <p class="domain-name text-muted f-18 mt-3 mb-1">{PATH} might just be the perfect match for your business</p>
-
+                            <h1 class="wrd-wrp-lft-col domain-name home-title display-4 font-weight-bold mt-3 mb-1">
+                                {PATH}</h1>
+                            <p class="wrd-wrp-lft-col domain-name text-muted f-18 mt-3 mb-1">{PATH} might just be the
+                                perfect match for your business</p>
                             <div class="row mt-4">
                                 <div class="col-md-6">
                                     <p class="mb-2 f-16 font-weight-600"><i
@@ -72,10 +57,10 @@
                                 </div>
                             </div>
 
-                            <h5 class="mt-4">Don't waste any more time. <br>Send me a message to get more details on how to grab this domain!</h5>
-<!--                            <h2 class="mt-4">Current Offer: <u class="text-info">$375</u></h2>-->
+                            <h5 class="wrd-wrp-lft-col mt-4">Don't waste any more time.<br>Send me a message to get more
+                                details on how to grab this domain!</h5>
                             <br><br><br>You can fill in the form to the right,<br>
-                            or email me directly at: <a href = "mailto: george@gkonservices.com"><b>george@gkonservices.com</b></a>
+                            or email me directly at: <a href="mailto: george@gkonservices.com"><b>george@gkonservices.com</b></a>
                         </div>
                     </div>
 
@@ -90,7 +75,7 @@
 
                             <div class="custom-form mt-4">
                                 <div id="message"></div>
-                                <form method="POST" id="form" onsubmit="return submitForm()">
+                                <form method="POST" id="form" name="form" onsubmit="return ValidateEmail()">
                                     <input type="hidden" name="_captcha" value="false">
                                     <input type="hidden" name="_captcha" value="false">
                                     <input type="hidden" name="_captcha" value="false">
@@ -105,13 +90,6 @@
                                                        placeholder="Your Name" required/>
                                             </div>
                                         </div>
-
-                                        <!--                                        <div class="col-lg-6">-->
-                                        <!--                                            <div class="form-group mt-3">-->
-                                        <!--                                                <input name="email" id="email" type="text" class="form-control"-->
-                                        <!--                                                       placeholder="Your Email"/>-->
-                                        <!--                                            </div>-->
-                                        <!--                                        </div>-->
                                     </div>
 
                                     <div class="row">
@@ -127,7 +105,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group mt-3">
                                                 <textarea name="Message" id="comments" rows="4" class="form-control"
-                                                          placeholder="Domain-related questions (if any)"></textarea>
+                                                          placeholder="Your Domain-related questions (if any)"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -164,29 +142,13 @@
                                 <a href="https://www.facebook.com/gkonnn" target="_blank" rel="noopener noreferrer"
                                    class="icon bg-facebook"><i class="mdi mdi-facebook"></i></a>
                             </li>
-                            <!--                                <li class="list-inline-item">-->
-                            <!--                                    <a href="" class="icon bg-twitter"><i class="mdi mdi-twitter"></i></a>-->
-                            <!--                                </li>-->
-                            <!--                                <li class="list-inline-item">-->
-                            <!--                                    <a href="" class="icon bg-google"><i class="mdi mdi-google-plus"></i></a>-->
-                            <!--                                </li>-->
                             <li class="list-inline-item">
                                 <a href="https://www.linkedin.com/in/gkonn" target="_blank" rel="noopener noreferrer"
                                    class="icon bg-linkedin"><i class="mdi mdi-linkedin"></i></a>
                             </li>
-                            <!--                                <li class="list-inline-item">-->
-                            <!--                                    <a href="" class="icon bg-dribbble"><i class="mdi mdi-dribbble"></i></a>-->
-                            <!--                                </li>-->
-                            <!--                                <li class="list-inline-item">-->
-                            <!--                                    <a href="" class="icon bg-wordpress"><i class="mdi mdi-wordpress"></i></a>-->
-                            <!--                                </li>-->
                         </ul>
                     </div>
                 </div>
-
-                <!--                    <div class="float-right pull-none">-->
-                <!--                        <p class="mb-0 mt-4">© 2020 Domania. Design by Themesdesign</p>-->
-                <!--                    </div>-->
             </div>
         </div>
     </div>
@@ -202,33 +164,8 @@
 
 <!-- Main Js -->
 <script src="js/app.js"></script>
-
-<script>
-    function submitForm() {
-        const form = document.getElementById('form')
-        const formData = new FormData(form)
-        const url = 'https://formsubmit.co/george@gkonservices.com'
-        fetch(
-          url,
-          {
-            method: 'POST',
-            body: formData
-          }
-        )
-        window.alert('Email sent successfully.')
-        return false
-    }
-    function substituteWithDomainName() {
-        const path = window.location.hash.replace('#', '')
-        history.pushState({ page: 1 }, "", '/domain-for-sale')
-        toSubstitute = document.getElementsByClassName('domain-name')
-        for(var i = 0; i < toSubstitute.length; i++){
-            toSubstitute[i].innerHTML = toSubstitute[i].innerHTML.replace('{PATH}', path)
-        }
-        document.getElementById('subject').value = path
-    }
-    substituteWithDomainName()
-</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/my-scripts.js"></script>
 </body>
 
 </html>
