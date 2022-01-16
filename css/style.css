@@ -1210,7 +1210,7 @@ hr {
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   bottom: 0px;
   left: 0;
   right: 0;
@@ -1252,7 +1252,7 @@ hr {
   background: #2e9cca;
 }
 
-@media (min-width: 200px) and (max-width: 768px) {
+@media (min-width: 200px) and (max-width: 1024px) {
   .contain-box {
     padding: 120px 0px 100px 0px;
     height: auto;
