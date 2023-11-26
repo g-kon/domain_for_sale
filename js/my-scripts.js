@@ -45,7 +45,7 @@ function submitForm() {
 function substituteWithDomainName() {
     const path = window.location.hash.replace('#', '')
     //const path = 'maria.com'
-    history.pushState({ page: 1 }, "", '/domain-for-sale')
+    history.pushState({ page: 1 }, "", '/domain_for_sale')
     toSubstitute = document.getElementsByClassName('domain-name')
     for(var i = 0; i < toSubstitute.length; i++){
         toSubstitute[i].innerHTML = toSubstitute[i].innerHTML.replace('{PATH}', path)
