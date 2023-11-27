@@ -25,7 +25,7 @@ function ValidateEmail() {
 function submitForm() {
     const form = document.form
     const formData = new FormData(form)
-    const url = 'https://formsubmit.co/george@gkonservices.com'
+    const url = 'https://formsubmit.co/george@travelagencychicago.com'
     fetch(
         url, {
             method: 'POST',
