@@ -8,15 +8,15 @@ function sleep(milliseconds) {
 
 function ValidateEmail() {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    var email=document.form.email.value
-    if(email.match(mailformat)) {
+    var email = document.form.email.value
+    if (email.match(mailformat)) {
         return submitForm()
     }
     else {
         Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'You have entered an invalid email address!'
+            icon: 'error',
+            title: 'Oops...',
+            text: 'You have entered an invalid email address!'
         })
         return false
     }
@@ -28,9 +28,9 @@ function submitForm() {
     const url = 'https://formsubmit.co/george@gkonservices.com'
     fetch(
         url, {
-            method: 'POST',
-            body: formData
-        }
+        method: 'POST',
+        body: formData
+    }
     )
     sleep(1000)
     Swal.fire(
@@ -44,14 +44,15 @@ function submitForm() {
 
 function substituteWithDomainName() {
     const path = window.location.hash.replace('#', '')
+    // const path = 'travelagencychicago.com'
     history.pushState({ page: 1 }, "", '/domain_for_sale')
     toSubstitute = document.getElementsByClassName('domain-name')
-    for(var i = 0; i < toSubstitute.length; i++){
+    for (var i = 0; i < toSubstitute.length; i++) {
         toSubstitute[i].innerHTML = toSubstitute[i].innerHTML.replace('{PATH}', path)
     }
     document.getElementById('subject').value = path
 }
-    
+
 function hideNavbar() {// needed for Android browser pushing up keyboard
     if (screen.height <= 480) { // mobile
         document.getElementById('test').style.zIndex = "-1";
@@ -62,6 +63,6 @@ function showNavbar() { // needed for Android browser pushing up keyboard
     if (screen.height <= 480) {// mobile
         document.getElementById('test').style.zIndex = "1";
     }
-} 
+}
 
 substituteWithDomainName()
